@@ -1,0 +1,6 @@
+# 环境配置
+db:
+  mysql1:
+    dbBase: testdb-prod
+    dbPwd: root
+    dbUser: root

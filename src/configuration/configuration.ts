@@ -7,11 +7,11 @@ import { ConfigFactory } from '@nestjs/config';
 // 公共配置文件名称
 const YML_COMMON_CONFIG_FILENAME = 'config.yml';
 // 公共配置文件路径
-const filePath = join(__dirname, '../../config', YML_COMMON_CONFIG_FILENAME);
+const filePath = join(__dirname, '../../resources', YML_COMMON_CONFIG_FILENAME);
 // 根据启动命令中配置的环境变量，获取对应的环境配置文件路径
 const envPath = join(
   __dirname,
-  '../../config',
+  '../../resources',
   `config.${process.env.NODE_ENV || `development`}.yml`,
 );
 //读取公共配置内容,并使用yml进行加载

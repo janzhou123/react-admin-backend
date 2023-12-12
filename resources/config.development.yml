@@ -1,0 +1,7 @@
+# 环境配置
+db:
+  mysql1:
+    dbBase: reactadmindev
+    dbPwd: root
+    dbUser: root
+    synchronize: true

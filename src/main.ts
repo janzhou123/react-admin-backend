@@ -3,16 +3,16 @@ import { AppModule } from './app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { knife4jSetup } from 'nestjs-knife4j';
 import { Logger, LoggerErrorInterceptor } from 'nestjs-pino';
-import { HttpExceptionFilter } from './filters';
-import { TransformInterceptor } from './interceptor';
+import { HttpExceptionFilter } from './common/filters';
+import { TransformInterceptor } from './common/interceptor';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   //增加 swagger配置
   const options = new DocumentBuilder()
-    .setTitle('Coffee example')
-    .setDescription('The Coffee API description')
+    .setTitle('React admin backend')
+    .setDescription('React admin backend')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, options);
@@ -34,6 +34,9 @@ async function bootstrap() {
   app.useGlobalFilters(new HttpExceptionFilter());
   // 全局注册拦截器
   app.useGlobalInterceptors(new TransformInterceptor());
+  console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ');
+  console.log('Swagger url :>> ', 'http://localhost:3000/doc.html');
+  console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ');
   await app.listen(3000);
 }
 bootstrap();

@@ -13,9 +13,9 @@ import { DictService } from './dict.service';
     type: Dict,
   },
 })
-@Controller('dict')
 @ApiTags('dict 系统字典')
 @UseInterceptors(ClassSerializerInterceptor)
+@Controller('dict')
 export class DictController implements CrudController<Dict> {
   constructor(public service: DictService) {}
 }

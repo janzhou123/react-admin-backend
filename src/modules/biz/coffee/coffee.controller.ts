@@ -15,7 +15,7 @@ import { CoffeeService } from './coffee.service';
   },
 })
 @Controller('coffee')
-@ApiTags('coffee')
+@ApiTags('coffee 测试业务模块')
 @UseInterceptors(ClassSerializerInterceptor)
 export class CoffeeController implements CrudController<Coffee> {
   constructor(public service: CoffeeService) {}

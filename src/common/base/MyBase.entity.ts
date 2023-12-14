@@ -6,7 +6,7 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-export abstract class BaseEntity {
+export abstract class MyBaseEntity {
   @PrimaryGeneratedColumn('uuid', { comment: '主键' })
   id: string;
 

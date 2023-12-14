@@ -1,9 +1,9 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { Column, Entity } from 'typeorm';
-import { BaseEntity } from '../../common/base/Base.entity';
+import { MyBaseEntity } from '../../../common/base/MyBase.entity';
 
 @Entity('dict')
-export class Dict extends BaseEntity {
+export class Dict extends MyBaseEntity {
   @ApiProperty({
     type: String,
     description: '父主键',

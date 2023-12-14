@@ -1,16 +1,18 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { CoffeeModule } from './modules/coffee/coffee.module';
-import { CoffeeController } from './modules/coffee/coffee.controller';
+import { CoffeeModule } from './modules/biz/coffee/coffee.module';
+import { CoffeeController } from './modules/biz/coffee/coffee.controller';
 import { LoggerModule } from 'nestjs-pino';
 import {
   loggerOptions,
   typeOrmConfigAsync,
   configuration,
 } from './configuration';
-import { DictModule } from './modules/dict/dict.module';
-import { DictController } from './modules/dict/dict.controller';
+import { DictModule } from './modules/system/dict/dict.module';
+import { DictController } from './modules/system/dict/dict.controller';
+import { MenuController } from './modules/system/menu/menu.controller';
+import { MenuModule } from './modules/system/menu/menu.module';
 
 @Module({
   imports: [
@@ -22,8 +24,9 @@ import { DictController } from './modules/dict/dict.controller';
     LoggerModule.forRoot(loggerOptions),
     CoffeeModule,
     DictModule,
+    MenuModule,
   ],
-  controllers: [CoffeeController, DictController],
+  controllers: [CoffeeController, DictController, MenuController],
   providers: [],
 })
 export class AppModule {}

@@ -4,3 +4,9 @@ db:
     dbBase: testdb-prod
     dbPwd: root
     dbUser: root
+
+redis:
+  host: 127.0.0.1
+  port: 6379
+  pwd: root1
+  expire: 3600000

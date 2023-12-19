@@ -5,3 +5,9 @@ db:
     dbPwd: root
     dbUser: root
     synchronize: true
+
+redis:
+  host: 127.0.0.1
+  port: 6379
+  pwd: root
+  expire: 5000

@@ -17,7 +17,7 @@ import { UsersModule } from './modules/system/users/users.module';
 import { UsersController } from './modules/system/users/users.controller';
 import { AuthController } from './modules/system/auth/auth.controller';
 import { AuthModule } from './modules/system/auth/auth.module';
-import { APP_GUARD, Reflector } from '@nestjs/core';
+import { APP_GUARD } from '@nestjs/core';
 import { JwtAuthGuard } from './modules/system/auth/guard/jwt-auth.guard';
 
 @Module({

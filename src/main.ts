@@ -5,11 +5,11 @@ import { knife4jSetup } from 'nestjs-knife4j';
 import { Logger, LoggerErrorInterceptor } from 'nestjs-pino';
 import { HttpExceptionFilter } from './common/filters';
 import { TransformInterceptor } from './common/interceptor';
-import { JwtAuthGuard } from './modules/system/auth/guard/jwt-auth.guard';
+// import { JwtAuthGuard } from './modules/system/auth/guard/jwt-auth.guard';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  const contextPath = 'example';
+  // const contextPath = 'example';
 
   //增加 swagger配置
   const options = new DocumentBuilder()

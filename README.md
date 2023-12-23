@@ -22,3 +22,13 @@
     用户(完成)
     字典(完成)
     菜单(待完成)
+
+### 启动命令
+
+    pnpm run start:dev
+
+### swagger
+
+    地址：http://localhost:3000/doc.html
+
+    ![image](https://github.com/janzhou123/react-admin-backend/blob/main/swagger.png)

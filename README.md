@@ -31,4 +31,4 @@
 
     地址：http://localhost:3000/doc.html
 
-    ![image](https://github.com/janzhou123/react-admin-backend/blob/main/swagger.png)
+![image](https://github.com/janzhou123/react-admin-backend/blob/main/swagger.png)
